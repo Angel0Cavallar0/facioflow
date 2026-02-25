@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import logo from "@/assets/logo-facioflow.png";
 import NetworkBackground from "@/components/NetworkBackground";
+import SecurityBackground from "@/components/SecurityBackground";
 import { useState } from "react";
 
 const NAV_LINKS = [
@@ -225,33 +226,49 @@ const Index = () => {
         </section>
 
         {/* ─── SEGURANÇA ─── */}
-        <section id="seguranca" className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-facioflow-dark to-facioflow-dark border-t border-white/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center gap-4 mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center">
-                  <ShieldCheck className="text-primary" size={32} />
+        <section id="seguranca" className="border-t border-white/5 overflow-hidden">
+          <div className="grid md:grid-cols-2 min-h-[520px]">
+            {/* Left — interactive background */}
+            <div className="relative min-h-[280px] md:min-h-0">
+              <SecurityBackground />
+              {/* Subtle right-edge fade so it blends into the text column */}
+              <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-facioflow-dark to-transparent pointer-events-none" />
+            </div>
+
+            {/* Right — text content */}
+            <div className="flex items-center bg-facioflow-dark px-8 py-16 md:py-20 md:pl-12 md:pr-16">
+              <div className="max-w-lg">
+                {/* Icons */}
+                <div className="flex gap-3 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="text-primary" size={24} />
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+                    <Lock className="text-primary" size={24} />
+                  </div>
                 </div>
-                <div className="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center">
-                  <Lock className="text-primary" size={32} />
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                  Segurança e{" "}
+                  <span className="text-primary">Privacidade de Dados</span>
+                </h2>
+
+                <div className="space-y-5 text-muted-foreground leading-relaxed">
+                  <p>
+                    A segurança dos seus dados é prioridade absoluta na FacioFlow. Toda a nossa operação é construída sobre práticas rigorosas de proteção de dados, em total conformidade com a{" "}
+                    <strong className="text-facioflow-dark-foreground">LGPD</strong> e o{" "}
+                    <strong className="text-facioflow-dark-foreground">GDPR</strong>.
+                  </p>
+                  <p>
+                    Trabalhamos exclusivamente com ferramentas e sistemas que respeitam as normas de privacidade e segurança da informação. Desde a coleta até o armazenamento e processamento, cada etapa é planejada para garantir a integridade e a confidencialidade dos dados dos nossos clientes.
+                  </p>
+                  <p>
+                    Além disso, a FacioFlow responde diretamente às exigências da LGPD como empresa, o que significa que mantemos políticas internas de governança de dados, controle de acesso e transparência em todas as operações que envolvem informações sensíveis.
+                  </p>
+                  <p className="font-semibold text-facioflow-dark-foreground pt-1">
+                    Seus dados são seus. Nós só tratamos eles com a responsabilidade e cuidados que eles merecem.
+                  </p>
                 </div>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Segurança e <span className="text-primary">Privacidade de Dados</span>
-              </h2>
-              <div className="space-y-5 text-muted-foreground text-left md:text-center leading-relaxed">
-                <p>
-                  A segurança dos seus dados é prioridade absoluta na FacioFlow. Toda a nossa operação é construída sobre práticas rigorosas de proteção de dados, em total conformidade com a <strong className="text-facioflow-dark-foreground">LGPD</strong> e o <strong className="text-facioflow-dark-foreground">GDPR</strong>.
-                </p>
-                <p>
-                  Trabalhamos exclusivamente com ferramentas e sistemas que respeitam as normas de privacidade e segurança da informação. Desde a coleta até o armazenamento e processamento, cada etapa é planejada para garantir a integridade e a confidencialidade dos dados dos nossos clientes.
-                </p>
-                <p>
-                  Além disso, a FacioFlow responde diretamente às exigências da LGPD como empresa, o que significa que mantemos políticas internas de governança de dados, controle de acesso e transparência em todas as operações que envolvem informações sensíveis.
-                </p>
-                <p className="font-semibold text-facioflow-dark-foreground">
-                  Seus dados são seus. Nós só tratamos eles com a responsabilidade e cuidados que eles merecem.
-                </p>
               </div>
             </div>
           </div>
