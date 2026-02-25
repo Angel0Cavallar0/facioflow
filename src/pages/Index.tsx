@@ -194,7 +194,7 @@ const Index = () => {
                 Criamos para <span className="text-primary">solucionar o seu problema</span>
               </h2>
               <p className="text-muted-foreground">
-                Analisamos sua empresa e as suas necessidades para elaborar um sistema que se enquadre nas suas necessidades, centralizando dados, economizando tempo e aumentando sua receita.
+                Analisamos sua empresa para elaborar um sistema que se enquadre nas suas necessidades, centralizando dados, economizando tempo e aumentando sua receita.
               </p>
             </div>
 
