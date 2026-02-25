@@ -43,6 +43,13 @@ const HIGHLIGHTS = [
 
 const SERVICES = [
   {
+    icon: Brain,
+    title: "Agentes de IA e Sistemas RAG",
+    desc: "Criamos agentes de inteligência artificial e sistemas de Geração Aumentada por Recuperação (RAG) personalizados para a sua empresa. Seus dados internos se transformam em uma base de conhecimento acessível e inteligente, e os agentes atuam como verdadeiros especialistas virtuais dentro da sua operação, ajudando equipes e clientes.",
+    examples:
+      "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
+  },
+  {
     icon: Cog,
     title: "Automação de Processos",
     desc: "Eliminamos tarefas manuais e repetitivas conectando os sistemas da sua empresa por meio de APIs, Webhooks e soluções personalizadas. Otimize tempo, reduza erros e ganhe escala operacional com fluxos automatizados de ponta a ponta.",
@@ -55,11 +62,6 @@ const SERVICES = [
     desc: "Centralizamos os dados de todos os sistemas da sua empresa em dashboards inteligentes e interativos. Tenha visão clara e em tempo real de Marketing, Vendas, Produção, Financeiro e muito mais para tomar decisões baseadas em dados, com camadas de análise potencializadas por inteligência artificial.",
     examples:
       "Exemplos: dashboard comercial com funil de vendas, painel de performance de marketing e métricas de redes sociais, e acompanhamento de produção com indicadores operacionais.",
-  },
-  {
-    icon: Wrench,
-    title: "Desenvolvimento de Soluções Sob Medida",
-    desc: "Nem todo desafio tem uma ferramenta pronta no mercado. Analisamos a sua necessidade e desenvolvemos soluções tecnológicas exclusivas, integrações, plataformas, ferramentas e sistemas pensados especificamente para o seu contexto.",
   },
   {
     icon: Smartphone,
@@ -76,11 +78,9 @@ const SERVICES = [
       "Exemplo: assistente virtual para atendimento e agendamento automático via WhatsApp 100% customizado.",
   },
   {
-    icon: Brain,
-    title: "Agentes de IA e Sistemas RAG",
-    desc: "Criamos agentes de inteligência artificial e sistemas de Geração Aumentada por Recuperação (RAG) personalizados para a sua empresa. Seus dados internos se transformam em uma base de conhecimento acessível e inteligente, e os agentes atuam como verdadeiros especialistas virtuais dentro da sua operação, ajudando equipes e clientes.",
-    examples:
-      "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
+    icon: Wrench,
+    title: "Desenvolvimento de Soluções Sob Medida",
+    desc: "Nem todo desafio tem uma ferramenta pronta no mercado. Analisamos a sua necessidade e desenvolvemos soluções tecnológicas exclusivas, integrações, plataformas, ferramentas e sistemas pensados especificamente para o seu contexto.",
   },
 ];
 
