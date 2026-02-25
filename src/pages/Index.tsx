@@ -81,11 +81,6 @@ const SERVICES = [
     examples:
       "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
   },
-  {
-    icon: TrendingUp,
-    title: "Análise de Métricas Sociais por IA",
-    desc: "Conectamos suas redes sociais a sistemas de inteligência artificial que analisam engajamento, alcance, sentimento e tendências automaticamente. Transforme dados dispersos em insights acionáveis para sua estratégia digital.",
-  },
 ];
 
 const STEPS = [
