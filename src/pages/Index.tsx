@@ -25,6 +25,7 @@ import {
   Mail,
 } from "lucide-react";
 import logo from "@/assets/logo-facioflow.png";
+import NetworkBackground from "@/components/NetworkBackground";
 import { useState } from "react";
 
 const NAV_LINKS = [
@@ -146,8 +147,10 @@ const Index = () => {
       <main>
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden py-24 md:py-36">
-          {/* Gradient bg */}
-          <div className="absolute inset-0 bg-gradient-to-br from-facioflow-dark via-facioflow-dark to-primary/20 pointer-events-none" />
+          {/* Animated network background */}
+          <NetworkBackground />
+          {/* Gradient overlay for legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
 
           <div className="container relative mx-auto px-4 text-center max-w-3xl">
