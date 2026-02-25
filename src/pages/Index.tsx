@@ -35,13 +35,20 @@ const NAV_LINKS = [
 ];
 
 const HIGHLIGHTS = [
-  { icon: Package, title: "Desenvolvimento orientado ao produto" },
+  { icon: Package, title: "Desenvolvimento de Produto" },
   { icon: Cog, title: "Automação de Processos" },
   { icon: Zap, title: "Implementação rápida" },
   { icon: ShieldCheck, title: "Segurança de Dados" },
 ];
 
 const SERVICES = [
+  {
+    icon: Brain,
+    title: "Agentes de IA e Sistemas RAG",
+    desc: "Criamos agentes de inteligência artificial e sistemas de Geração Aumentada por Recuperação (RAG) personalizados para a sua empresa. Seus dados internos se transformam em uma base de conhecimento acessível e inteligente, e os agentes atuam como verdadeiros especialistas virtuais dentro da sua operação, ajudando equipes e clientes.",
+    examples:
+      "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
+  },
   {
     icon: Cog,
     title: "Automação de Processos",
@@ -55,11 +62,6 @@ const SERVICES = [
     desc: "Centralizamos os dados de todos os sistemas da sua empresa em dashboards inteligentes e interativos. Tenha visão clara e em tempo real de Marketing, Vendas, Produção, Financeiro e muito mais para tomar decisões baseadas em dados, com camadas de análise potencializadas por inteligência artificial.",
     examples:
       "Exemplos: dashboard comercial com funil de vendas, painel de performance de marketing e métricas de redes sociais, e acompanhamento de produção com indicadores operacionais.",
-  },
-  {
-    icon: Wrench,
-    title: "Desenvolvimento de Soluções Sob Medida",
-    desc: "Nem todo desafio tem uma ferramenta pronta no mercado. Analisamos a sua necessidade e desenvolvemos soluções tecnológicas exclusivas, integrações, plataformas, ferramentas e sistemas pensados especificamente para o seu contexto.",
   },
   {
     icon: Smartphone,
@@ -76,11 +78,9 @@ const SERVICES = [
       "Exemplo: assistente virtual para atendimento e agendamento automático via WhatsApp 100% customizado.",
   },
   {
-    icon: Brain,
-    title: "Agentes de IA e Sistemas RAG",
-    desc: "Criamos agentes de inteligência artificial e sistemas de Geração Aumentada por Recuperação (RAG) personalizados para a sua empresa. Seus dados internos se transformam em uma base de conhecimento acessível e inteligente, e os agentes atuam como verdadeiros especialistas virtuais dentro da sua operação, ajudando equipes e clientes.",
-    examples:
-      "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
+    icon: Wrench,
+    title: "Desenvolvimento de Soluções Sob Medida",
+    desc: "Nem todo desafio tem uma ferramenta pronta no mercado. Analisamos a sua necessidade e desenvolvemos soluções tecnológicas exclusivas, integrações, plataformas, ferramentas e sistemas pensados especificamente para o seu contexto.",
   },
 ];
 
@@ -172,14 +172,14 @@ const Index = () => {
 
         {/* ─── DESTAQUES ─── */}
         <section className="py-16 bg-facioflow-dark border-t border-white/5">
-          <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {HIGHLIGHTS.map((h) => (
               <Card key={h.title} className="bg-white/5 border-white/10 hover:border-primary/50 transition-colors group">
-                <CardContent className="flex flex-col items-center text-center p-8 gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
-                    <h.icon className="text-primary" size={28} />
+                <CardContent className="flex flex-row items-center p-4 gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
+                    <h.icon className="text-primary" size={20} />
                   </div>
-                  <h3 className="text-sm font-semibold text-facioflow-dark-foreground">{h.title}</h3>
+                  <h3 className="text-sm font-semibold text-facioflow-dark-foreground leading-snug">{h.title}</h3>
                 </CardContent>
               </Card>
             ))}
