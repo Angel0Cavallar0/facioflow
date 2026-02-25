@@ -43,7 +43,7 @@ const NetworkBackground = () => {
           vx: (Math.random() - 0.5) * 0.4,
           vy: (Math.random() - 0.5) * 0.4,
           radius: Math.random() * 1.8 + 0.8,
-          opacity: Math.random() * 0.5 + 0.25,
+          opacity: Math.random() * 0.4 + 0.55,
         });
       }
     };
@@ -63,7 +63,7 @@ const NetworkBackground = () => {
         // Draw node
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(221, 83%, 60%, ${p.opacity})`;
+        ctx.fillStyle = `hsla(221, 83%, 72%, ${p.opacity})`;
         ctx.fill();
 
         // Connect nodes to each other
@@ -74,11 +74,11 @@ const NetworkBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < CONNECTION_DISTANCE) {
-            const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.25;
+            const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.55;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `hsla(221, 83%, 60%, ${alpha})`;
+            ctx.strokeStyle = `hsla(221, 83%, 70%, ${alpha})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
@@ -90,11 +90,11 @@ const NetworkBackground = () => {
         const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
 
         if (mdist < MOUSE_DISTANCE) {
-          const alpha = (1 - mdist / MOUSE_DISTANCE) * 0.7;
+          const alpha = (1 - mdist / MOUSE_DISTANCE) * 0.9;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouseX, mouseY);
-          ctx.strokeStyle = `hsla(221, 83%, 65%, ${alpha})`;
+          ctx.strokeStyle = `hsla(221, 83%, 75%, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
