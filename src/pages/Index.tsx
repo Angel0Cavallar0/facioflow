@@ -172,14 +172,14 @@ const Index = () => {
 
         {/* ─── DESTAQUES ─── */}
         <section className="py-16 bg-facioflow-dark border-t border-white/5">
-          <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {HIGHLIGHTS.map((h) => (
               <Card key={h.title} className="bg-white/5 border-white/10 hover:border-primary/50 transition-colors group">
-                <CardContent className="flex flex-col items-center text-center p-8 gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
-                    <h.icon className="text-primary" size={28} />
+                <CardContent className="flex flex-row items-center p-4 gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
+                    <h.icon className="text-primary" size={20} />
                   </div>
-                  <h3 className="text-sm font-semibold text-facioflow-dark-foreground">{h.title}</h3>
+                  <h3 className="text-sm font-semibold text-facioflow-dark-foreground leading-snug">{h.title}</h3>
                 </CardContent>
               </Card>
             ))}
