@@ -35,7 +35,7 @@ const NAV_LINKS = [
 ];
 
 const HIGHLIGHTS = [
-  { icon: Package, title: "Desenvolvimento orientado ao produto" },
+  { icon: Package, title: "Desenvolvimento de Produto" },
   { icon: Cog, title: "Automação de Processos" },
   { icon: Zap, title: "Implementação rápida" },
   { icon: ShieldCheck, title: "Segurança de Dados" },
