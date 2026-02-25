@@ -258,8 +258,13 @@ const Index = () => {
         </section>
 
         {/* ─── COMO TRABALHAMOS ─── */}
-        <section id="como-trabalhamos" className="py-20 md:py-28 bg-facioflow-dark border-t border-white/5">
-          <div className="container mx-auto px-4">
+        <section id="como-trabalhamos" className="relative overflow-hidden py-20 md:py-28 border-t border-white/5">
+          {/* Animated network background */}
+          <NetworkBackground />
+          {/* Gradient overlay for legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
+          <div className="container relative mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
               Como <span className="text-primary">Trabalhamos</span>
             </h2>
@@ -273,7 +278,7 @@ const Index = () => {
                   <div key={step.num} className={`relative md:flex items-center ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} md:mb-16 last:md:mb-0`}>
                     {/* Content */}
                     <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
-                      <Card className="bg-white/5 border-white/10 inline-block">
+                      <Card className="bg-white/5 border-white/10 inline-block hover:border-primary/60 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
                         <CardContent className="p-6 space-y-2">
                           <div className="flex items-center gap-3 justify-start">
                             <step.icon className="text-primary" size={20} />
