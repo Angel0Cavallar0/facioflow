@@ -348,7 +348,7 @@ const Index = () => {
 
             {/* Social links placeholder — substitua os href abaixo */}
             <div className="flex items-center gap-4">
-              <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/facioflow" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
