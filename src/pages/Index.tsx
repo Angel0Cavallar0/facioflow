@@ -351,10 +351,10 @@ const Index = () => {
               <a href="https://www.instagram.com/facioflow" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" aria-label="https://linkedin.com/company/facioflow/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" aria-label="contato@facioflow.com.br" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
             </div>
