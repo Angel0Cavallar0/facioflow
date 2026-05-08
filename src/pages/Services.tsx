@@ -102,10 +102,18 @@ const Services = () => {
                 A automação deixou de ser diferencial e virou a base.
               </h2>
               <p className="text-muted-foreground">
-                O Gartner projeta que o investimento global em IA chegará a US$ 2,5
-                trilhões em 2026, e que 40% das aplicações empresariais terão agentes
-                de IA integrados até o fim do mesmo ano, saindo de menos de 5% em
-                2025.
+                O{" "}
+                <a
+                  href="https://www.gartner.com/en/newsroom/press-releases/2026-1-15-gartner-says-worldwide-ai-spending-will-total-2-point-5-trillion-dollars-in-2026"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-primary hover:text-primary/90"
+                >
+                  Gartner
+                </a>{" "}
+                projeta que o investimento global em IA chegará a US$ 2,5 trilhões em
+                2026, e que 40% das aplicações empresariais terão agentes de IA
+                integrados até o fim do mesmo ano, saindo de menos de 5% em 2025.
               </p>
               <p className="text-muted-foreground">
                 O recado é claro: empresas que não automatizam ficam para trás, e quem
@@ -135,7 +143,9 @@ const Services = () => {
 
         <section className="border-y border-white/10 py-20 md:py-28">
           <div className="container mx-auto space-y-6 px-4">
-            <h2 className="text-3xl font-bold md:text-4xl">Nossos Serviços</h2>
+            <h2 className="text-center text-3xl font-bold md:text-4xl">
+              Nossos Serviços
+            </h2>
 
             {serviceItems.map((item) => (
               <article
