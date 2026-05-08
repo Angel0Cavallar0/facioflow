@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
 import PointSphere from "@/components/PointSphere";
+import NetworkBackground from "@/components/NetworkBackground";
 
 const serviceItems = [
   {
@@ -69,25 +70,28 @@ const Services = () => {
       <SiteHeader ctaLabel="Fale com um especialista" />
 
       <main>
-        <section className="border-b border-white/10 py-24 md:py-32">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-white/5 px-6 py-16 text-center md:px-12">
-              <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl">
-                Automação inteligente para operações que precisam escalar
-              </h1>
-              <p className="mx-auto mb-10 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                Conectamos seus sistemas, automatizamos processos e aplicamos IA onde
-                ela gera resultado mensurável.
-              </p>
-              <a href="https://wa.me/">
-                <Button
-                  size="lg"
-                  className="rounded-full bg-primary px-10 py-6 text-base font-semibold text-primary-foreground hover:bg-primary/90"
-                >
-                  Fale com um especialista
-                </Button>
-              </a>
-            </div>
+        <section className="relative overflow-hidden border-b border-white/10 py-24 md:py-36">
+          <NetworkBackground />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
+
+          <div className="container relative mx-auto max-w-4xl px-4 text-center">
+            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
+              <span className="text-[#2463EB]">Automação inteligente</span>{" "}
+              <span className="text-white">para operações que precisam escalar</span>
+            </h1>
+            <p className="mx-auto mb-10 max-w-3xl text-lg text-muted-foreground md:text-xl">
+              Conectamos seus sistemas, automatizamos processos e aplicamos IA onde
+              ela gera resultado mensurável.
+            </p>
+            <a href="https://wa.me/">
+              <Button
+                size="lg"
+                className="rounded-full bg-primary px-10 py-6 text-base font-semibold text-primary-foreground hover:bg-primary/90"
+              >
+                Fale com um especialista
+              </Button>
+            </a>
           </div>
         </section>
 
