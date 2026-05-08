@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
 import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
-import MiniDashboard from "@/components/MiniDashboard";
+import MiniDashboard from "@/components/MiniDashboardv2";
 
 const serviceItems = [
   {
