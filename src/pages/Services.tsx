@@ -144,7 +144,7 @@ const Services = () => {
                   className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2 lg:items-center"
                 >
                   <div
-                    className={`flex min-h-[220px] items-center justify-center rounded-xl bg-white/5 p-6 ${
+                    className={`flex min-h-[220px] items-center justify-center rounded-xl bg-transparent p-6 ${
                       item.imageFirst ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
