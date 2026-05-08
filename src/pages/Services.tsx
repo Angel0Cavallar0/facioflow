@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
 import MiniDashboard from "@/components/MiniDashboardv2";
+import MiniChat from "@/components/MiniChat";
 
 const serviceItems = [
   {
@@ -138,7 +139,7 @@ const Services = () => {
               {serviceItems.map((item) => (
                 <article
                   key={item.title}
-                  className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2"
+                  className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2 lg:items-center"
                 >
                   <div
                     className={`flex min-h-[220px] items-center justify-center rounded-xl border border-dashed border-white/20 bg-facioflow-dark/40 p-6 ${
@@ -147,13 +148,19 @@ const Services = () => {
                   >
                     {item.imagePath === "/images/dashboards_dados" ? (
                       <MiniDashboard />
+                    ) : item.imagePath === "/images/agentes_ia" ? (
+                      <MiniChat />
                     ) : (
                       <span className="text-sm text-muted-foreground">
                         Placeholder de imagem: {item.imagePath}
                       </span>
                     )}
                   </div>
-                  <div className={`${item.imageFirst ? "lg:order-2" : "lg:order-1"}`}>
+                  <div
+                    className={`flex h-full flex-col justify-center text-left ${
+                      item.imageFirst ? "lg:order-2" : "lg:order-1"
+                    }`}
+                  >
                     <h3 className="mb-6 text-2xl font-semibold">{item.title}</h3>
                     <p className="text-muted-foreground">{item.body}</p>
                   </div>
