@@ -64,7 +64,7 @@ const benefitItems = [
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-facioflow-dark font-poppins text-facioflow-dark-foreground">
+    <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
       <SiteHeader ctaLabel="Fale com um especialista" />
 
       <main>

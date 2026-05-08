@@ -92,7 +92,7 @@ const STEPS = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-facioflow-dark text-facioflow-dark-foreground font-poppins">
+    <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
       <SiteHeader />
 
       <main>
