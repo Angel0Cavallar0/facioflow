@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Tomorrow", "ui-sans-serif", "system-ui", "sans-serif"],
+        tomorrow: ["Tomorrow", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
