@@ -5,7 +5,7 @@ import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
 import MiniDashboard from "@/components/MiniDashboardv2";
 import MiniChat from "@/components/MiniChat";
-import MiniWorkflow from "@/components/MiniWorkflow";
+import MiniWorkflow from "@/components/MiniWorkflowv2";
 import MiniPlatform from "@/components/MiniPlatform";
 
 const serviceItems = [
