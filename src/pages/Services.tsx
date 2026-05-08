@@ -134,36 +134,38 @@ const Services = () => {
         </section>
 
         <section className="border-y border-white/10 py-20 md:py-28">
-          <div className="container mx-auto space-y-6 px-4">
-            <h2 className="text-center text-3xl font-bold md:text-4xl">
+          <div className="container mx-auto px-4">
+            <h2 className="mb-10 text-center text-3xl font-bold md:text-4xl">
               Nossos Serviços
             </h2>
 
-            {serviceItems.map((item) => (
-              <article
-                key={item.title}
-                className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2"
-              >
-                <div
-                  className={`flex min-h-[220px] items-center justify-center rounded-xl border border-dashed border-white/20 bg-facioflow-dark/40 p-6 ${
-                    item.imageFirst ? "lg:order-1" : "lg:order-2"
-                  }`}
+            <div className="space-y-8">
+              {serviceItems.map((item) => (
+                <article
+                  key={item.title}
+                  className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2"
                 >
-                  <span className="text-sm text-muted-foreground">
-                    Placeholder de imagem: {item.imagePath}
-                  </span>
-                </div>
-                <div className={`${item.imageFirst ? "lg:order-2" : "lg:order-1"}`}>
-                  <h3 className="mb-4 text-2xl font-semibold">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.body}</p>
-                </div>
-              </article>
-            ))}
+                  <div
+                    className={`flex min-h-[220px] items-center justify-center rounded-xl border border-dashed border-white/20 bg-facioflow-dark/40 p-6 ${
+                      item.imageFirst ? "lg:order-1" : "lg:order-2"
+                    }`}
+                  >
+                    <span className="text-sm text-muted-foreground">
+                      Placeholder de imagem: {item.imagePath}
+                    </span>
+                  </div>
+                  <div className={`${item.imageFirst ? "lg:order-2" : "lg:order-1"}`}>
+                    <h3 className="mb-6 text-2xl font-semibold">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.body}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="py-20 md:py-24">
-          <div className="container mx-auto max-w-5xl rounded-2xl border border-white/10 bg-white/5 px-6 py-12 md:px-10">
+          <div className="container mx-auto max-w-5xl rounded-2xl border border-white/10 bg-white/5 px-6 py-12 text-center md:px-10">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
               Automação que começa pelo planejamento, não pela ferramenta.
             </h2>
@@ -175,7 +177,7 @@ const Services = () => {
               consolidadas e desenvolvimento sob medida, combinando o que faz sentido
               para entregar resultado real.
             </p>
-            <a href="https://wa.me/">
+            <a href="https://wa.me/" className="inline-flex">
               <Button
                 size="lg"
                 className="rounded-full bg-primary px-8 text-primary-foreground hover:bg-primary/90"
@@ -188,7 +190,9 @@ const Services = () => {
 
         <section className="border-t border-white/10 py-20 md:py-28">
           <div className="container mx-auto px-4">
-            <h2 className="mb-10 text-3xl font-bold md:text-4xl">Benefícios</h2>
+            <h2 className="mb-10 text-center text-3xl font-bold md:text-4xl">
+              Benefícios
+            </h2>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {benefitItems.map((item) => (
                 <Card key={item.title} className="border-white/10 bg-white/5">
