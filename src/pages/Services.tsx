@@ -5,6 +5,8 @@ import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
 import MiniDashboard from "@/components/MiniDashboardv2";
 import MiniChat from "@/components/MiniChat";
+import MiniWorkflow from "@/components/MiniWorkflow";
+import MiniPlatform from "@/components/MiniPlatform";
 
 const serviceItems = [
   {
@@ -142,14 +144,18 @@ const Services = () => {
                   className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2 lg:items-center"
                 >
                   <div
-                    className={`flex min-h-[220px] items-center justify-center rounded-xl border border-dashed border-white/20 bg-facioflow-dark/40 p-6 ${
+                    className={`flex min-h-[220px] items-center justify-center rounded-xl bg-white/5 p-6 ${
                       item.imageFirst ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    {item.imagePath === "/images/dashboards_dados" ? (
+                    {item.imagePath === "/images/automacao_processos" ? (
+                      <MiniWorkflow />
+                    ) : item.imagePath === "/images/dashboards_dados" ? (
                       <MiniDashboard />
                     ) : item.imagePath === "/images/agentes_ia" ? (
                       <MiniChat />
+                    ) : item.imagePath === "/images/plataformas_sobmedida" ? (
+                      <MiniPlatform />
                     ) : (
                       <span className="text-sm text-muted-foreground">
                         Placeholder de imagem: {item.imagePath}
