@@ -126,14 +126,6 @@ const Services = () => {
                 e aplicamos IA onde ela faz diferença, sem promessa vazia, sem stack
                 inflada.
               </p>
-              <a
-                href="https://www.gartner.com/en/newsroom/press-releases/2026-1-15-gartner-says-worldwide-ai-spending-will-total-2-point-5-trillion-dollars-in-2026"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex text-sm font-medium text-primary hover:text-primary/90"
-              >
-                Ver fonte do Gartner
-              </a>
             </div>
             <div className="flex min-h-[520px] items-center justify-center lg:min-h-[560px]">
               <PointSphere className="h-[520px] w-full lg:h-[560px]" />
@@ -200,8 +192,8 @@ const Services = () => {
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {benefitItems.map((item) => (
                 <Card key={item.title} className="border-white/10 bg-white/5">
-                  <CardContent className="space-y-3 p-6">
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <CardContent className="space-y-3 p-6 text-center">
+                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.text}</p>
                   </CardContent>
                 </Card>
