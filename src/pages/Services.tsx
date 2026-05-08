@@ -123,8 +123,8 @@ const Services = () => {
                 Ver fonte do Gartner
               </a>
             </div>
-            <div className="flex min-h-[420px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4">
-              <PointSphere className="h-[420px] w-full max-w-[560px]" />
+            <div className="flex min-h-[520px] items-center justify-center lg:min-h-[560px]">
+              <PointSphere className="h-[520px] w-full lg:h-[560px]" />
             </div>
           </div>
         </section>
