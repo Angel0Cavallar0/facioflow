@@ -6,8 +6,8 @@ import NetworkBackground from "@/components/NetworkBackground";
 
 const serviceItems = [
   {
-    title: "Automação de processos",
-    body: "Workflows que conectam ferramentas e eliminam tarefas manuais em qualquer área da operação, vendas, marketing, financeiro, logística, RH. Cada processo é mapeado, modelado e automatizado com gatilhos, validações e regras de negócio próprias da sua empresa, garantindo que o resultado seja consistente e auditável a cada execução.",
+    title: "Automação de processos e integrações",
+    body: "Workflows que conectam ferramentas e eliminam tarefas manuais e repetitivas em qualquer área da operação. Vendas, marketing, financeiro, logística, RH, cada processo é mapeado, modelado e automatizado com gatilhos, validações e regras de negócio próprias da sua empresa, garantindo que o resultado seja consistente e auditável a cada execução. A base de qualquer automação eficaz é a integração entre os sistemas envolvidos. Quando ERPs, CRMs, ferramentas de marketing e canais de atendimento operam de forma descentralizada, surgem retrabalho, dados duplicados e decisões baseadas em informação incompleta. Cada projeto começa com uma consultoria técnica para avaliar a viabilidade de integração entre os sistemas envolvidos. A partir desse diagnóstico, é definida a arquitetura adequada para o seu negócio.",
     imagePath: "/images/automacao_processos",
     imageFirst: true,
   },
@@ -28,12 +28,6 @@ const serviceItems = [
     body: "Quando o que sua operação precisa não cabe em ferramenta de prateleira, desenvolvemos a plataforma do zero. Aplicações web completas, com autenticação, banco de dados, controle de permissões, atualização em tempo real e integração nativa com seus workflows e automações. Painéis administrativos, sistemas de gestão internos, portais de cliente, ferramentas de operação específicas do seu negócio. Cada projeto é construído com stack moderna e arquitetura escalável, pensada para crescer junto com sua empresa.",
     imagePath: "/images/plataformas_sobmedida",
     imageFirst: false,
-  },
-  {
-    title: "Integrações e APIs",
-    body: "Sistemas que não conversam entre si geram retrabalho, dados duplicados e decisões baseadas em informação incompleta. ERPs, CRMs, plataformas de e-commerce, ferramentas de marketing, sistemas legados, canais de atendimento e plataformas de RH frequentemente operam em silos. A FacioFlow inicia cada projeto de integração com uma consultoria técnica para avaliar a viabilidade: análise da documentação disponível, das APIs expostas, das limitações de cada sistema e das possibilidades reais de comunicação. A partir desse diagnóstico, é proposta a arquitetura adequada, usando APIs nativas, webhooks, conectores intermediários ou abordagens alternativas quando a integração direta não é possível.",
-    imagePath: "/images/integracoes",
-    imageFirst: true,
   },
 ];
 
