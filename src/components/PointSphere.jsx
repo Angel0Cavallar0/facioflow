@@ -19,19 +19,22 @@ export default function PointSphere({
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;
+    const width = Math.max(mount.clientWidth, 320);
+    const height = Math.max(mount.clientHeight, 320);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      60,
-      mount.clientWidth / mount.clientHeight,
-      0.1,
-      100
-    );
+    const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
     camera.position.z = 6;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch (error) {
+      console.error("PointSphere: falha ao criar contexto WebGL.", error);
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(mount.clientWidth, mount.clientHeight);
+    renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
     mount.appendChild(renderer.domElement);
 
@@ -84,6 +87,14 @@ export default function PointSphere({
     canvas.width = 64;
     canvas.height = 64;
     const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      console.error("PointSphere: contexto 2D indisponivel para sprite.");
+      renderer.dispose();
+      if (mount.contains(renderer.domElement)) {
+        mount.removeChild(renderer.domElement);
+      }
+      return;
+    }
     const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
     grad.addColorStop(0, "rgba(255,255,255,1)");
     grad.addColorStop(0.4, "rgba(255,255,255,0.6)");
@@ -93,7 +104,7 @@ export default function PointSphere({
     const sprite = new THREE.CanvasTexture(canvas);
 
     const material = new THREE.PointsMaterial({
-      size: 0.06,
+      size: 0.08,
       map: sprite,
       vertexColors: true,
       transparent: true,
@@ -123,8 +134,8 @@ export default function PointSphere({
     mount.addEventListener("mouseleave", handleLeave);
 
     const handleResize = () => {
-      const w = mount.clientWidth;
-      const h = mount.clientHeight;
+      const w = Math.max(mount.clientWidth, 320);
+      const h = Math.max(mount.clientHeight, 320);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
