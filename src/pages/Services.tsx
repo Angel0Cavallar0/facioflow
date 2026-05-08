@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
 import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
+import MiniDashboard from "@/components/MiniDashboard";
 
 const serviceItems = [
   {
@@ -144,9 +145,13 @@ const Services = () => {
                       item.imageFirst ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <span className="text-sm text-muted-foreground">
-                      Placeholder de imagem: {item.imagePath}
-                    </span>
+                    {item.imagePath === "/images/dashboards_dados" ? (
+                      <MiniDashboard />
+                    ) : (
+                      <span className="text-sm text-muted-foreground">
+                        Placeholder de imagem: {item.imagePath}
+                      </span>
+                    )}
                   </div>
                   <div className={`${item.imageFirst ? "lg:order-2" : "lg:order-1"}`}>
                     <h3 className="mb-6 text-2xl font-semibold">{item.title}</h3>
