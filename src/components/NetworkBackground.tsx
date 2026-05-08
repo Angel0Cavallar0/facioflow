@@ -123,14 +123,14 @@ const NetworkBackground = () => {
     initParticles();
     draw();
 
-    canvas.addEventListener("mousemove", handleMouseMove);
-    canvas.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseleave", handleMouseLeave);
     window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      canvas.removeEventListener("mousemove", handleMouseMove);
-      canvas.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -138,7 +138,7 @@ const NetworkBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-auto"
+      className="pointer-events-none absolute inset-0 h-full w-full"
     />
   );
 };

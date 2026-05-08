@@ -18,15 +18,13 @@ import {
   Hammer,
   Rocket,
   RefreshCw,
-  Menu,
-  X,
   Instagram,
   Linkedin,
   Mail,
 } from "lucide-react";
 import logo from "@/assets/logo-facioflow.png";
 import NetworkBackground from "@/components/NetworkBackground";
-import { useState } from "react";
+import SiteHeader from "@/components/SiteHeader";
 
 const NAV_LINKS = [
   { label: "Soluções", href: "#solucoes" },
@@ -93,56 +91,9 @@ const STEPS = [
 ];
 
 const Index = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-facioflow-dark text-facioflow-dark-foreground font-poppins">
-      {/* ─── HEADER ─── */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-facioflow-dark/80 backdrop-blur-lg">
-        <nav className="container mx-auto flex items-center justify-between px-4 py-4">
-          <a href="#" aria-label="FacioFlow Home">
-            <img src={logo} alt="FacioFlow" className="h-8 md:h-10" />
-          </a>
-
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* CTA PLACEHOLDER — substitua o href abaixo pelo seu link */}
-          <a href="#" className="hidden md:inline-flex">
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6">
-              Fale Conosco
-            </Button>
-          </a>
-
-          {/* Mobile toggle */}
-          <button className="md:hidden text-facioflow-dark-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </nav>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 bg-facioflow-dark px-4 pb-4 space-y-3">
-            {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                {l.label}
-              </a>
-            ))}
-            {/* CTA PLACEHOLDER */}
-            <a href="#">
-              <Button size="sm" className="w-full bg-primary text-primary-foreground rounded-full">Fale Conosco</Button>
-            </a>
-          </div>
-        )}
-      </header>
+      <SiteHeader />
 
       <main>
         {/* ─── HERO ─── */}
