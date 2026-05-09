@@ -83,7 +83,8 @@ const Index = () => {
 
           <div className="container relative mx-auto px-4 text-center max-w-3xl">
             <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
-              Inteligência tecnológica que escala seu negócio
+              Inteligência tecnológica que{" "}
+              <span className="text-[#2463EB]">escala seu negócio</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Desenvolvemos soluções e automações personalizadas com IA para facilitar os processos da sua empresa e trazer mais clareza sobre os dados.
@@ -141,13 +142,16 @@ const Index = () => {
             </div>
 
             <div className="mt-12 flex justify-center">
-              <Link
-                to="/servicos"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/90"
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-primary px-8 font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform duration-300 ease-out hover:scale-105 hover:bg-primary/90 active:scale-100"
               >
-                Conheça mais nossos serviços
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
-              </Link>
+                <Link to="/servicos" className="group inline-flex items-center gap-2">
+                  Conheça mais nossos serviços
+                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
