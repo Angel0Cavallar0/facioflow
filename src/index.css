@@ -6,26 +6,24 @@
 
 @layer base {
   :root {
-    /* Light: branco dominante; #e1e6eb em muted/secundários e cinzas azulados alinhados */
-    --background: 0 0% 100%;
-    --foreground: 220 25% 14%;
+    /* Light: cinza como base (~#e1e6eb); cartões/painéis um tom mais claro (sem branco puro) */
+    --background: 215 22% 91%;
+    --foreground: 220 28% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 14%;
+    --card: 215 18% 96%;
+    --card-foreground: 220 28% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 14%;
+    --popover: 215 18% 96%;
+    --popover-foreground: 220 28% 12%;
 
     --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    /* Faixa mais clara que #e1e6eb para hover/blocos suaves */
-    --secondary: 215 20% 96%;
-    --secondary-foreground: 220 25% 18%;
+    --secondary: 215 18% 88%;
+    --secondary-foreground: 220 28% 14%;
 
-    /* Tom #e1e6eb — bases de cartões suaves e faixas */
-    --muted: 215 22% 91%;
-    --muted-foreground: 215 14% 38%;
+    --muted: 215 18% 86%;
+    --muted-foreground: 215 12% 34%;
 
     --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
@@ -33,24 +31,23 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 14% 82%;
-    --input: 215 14% 82%;
+    --border: 215 14% 78%;
+    --input: 215 14% 78%;
     --ring: 221 83% 53%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 25% 14%;
+    --sidebar-background: 215 22% 91%;
+    --sidebar-foreground: 220 28% 12%;
     --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 22% 91%;
-    --sidebar-accent-foreground: 220 25% 18%;
-    --sidebar-border: 215 14% 85%;
+    --sidebar-accent: 215 18% 88%;
+    --sidebar-accent-foreground: 220 28% 14%;
+    --sidebar-border: 215 14% 80%;
     --sidebar-ring: 221 83% 53%;
 
-    /* Shell do site alinhado ao branco principal */
-    --facioflow-dark: 0 0% 100%;
-    --facioflow-dark-foreground: 220 25% 14%;
+    --facioflow-dark: 215 22% 91%;
+    --facioflow-dark-foreground: 220 28% 12%;
     --facioflow-blue-glow: 221 83% 53%;
     --facioflow-blue-deep: 224 76% 48%;
   }

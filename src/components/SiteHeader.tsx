@@ -27,7 +27,7 @@ const SiteHeader = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-lg dark:border-white/10 dark:bg-facioflow-dark/80">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/92 backdrop-blur-md dark:border-white/10 dark:bg-facioflow-dark/80">
       <nav className="container mx-auto flex items-center justify-between px-4 py-4">
         <NavLink to="/" aria-label="FacioFlow Home" onClick={() => setMobileMenuOpen(false)}>
           <img src={logo} alt="FacioFlow" className="h-8 md:h-10" />
@@ -82,7 +82,7 @@ const SiteHeader = ({
       </nav>
 
       {mobileMenuOpen && (
-        <div className="space-y-3 border-t border-border/60 bg-background/95 px-4 pb-4 dark:border-white/10 dark:bg-facioflow-dark md:hidden">
+        <div className="space-y-3 border-t border-border bg-card/95 px-4 pb-4 dark:border-white/10 dark:bg-facioflow-dark md:hidden">
           {ROUTE_LINKS.map((link) => (
             <NavLink
               key={link.to}
