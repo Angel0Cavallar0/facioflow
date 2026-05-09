@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import ThemeToggle from "@/components/ThemeToggle";
-import logo from "@/assets/logo-facioflow.png";
+import FacioFlowLogo from "@/components/FacioFlowLogo";
 
 type SiteHeaderProps = {
   ctaLabel?: string;
@@ -30,7 +30,7 @@ const SiteHeader = ({
     <header className="sticky top-0 z-50 border-b border-border bg-background/92 backdrop-blur-md dark:border-white/10 dark:bg-facioflow-dark/80">
       <nav className="container mx-auto flex items-center justify-between px-4 py-4">
         <NavLink to="/" aria-label="FacioFlow Home" onClick={() => setMobileMenuOpen(false)}>
-          <img src={logo} alt="FacioFlow" className="h-8 md:h-10" />
+          <FacioFlowLogo className="h-8 w-auto md:h-10" />
         </NavLink>
 
         <ul className="hidden items-center gap-6 md:flex">

@@ -19,8 +19,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-facioflow.png";
 import NetworkBackground from "@/components/NetworkBackground";
+import FacioFlowLogo from "@/components/FacioFlowLogo";
 import SiteHeader from "@/components/SiteHeader";
 
 const FOOTER_NAV = [
@@ -287,7 +287,7 @@ const Index = () => {
       <footer className="border-t border-border/60 bg-muted/40 py-12 dark:border-white/10 dark:bg-facioflow-dark">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <img src={logo} alt="FacioFlow" className="h-8" />
+            <FacioFlowLogo className="h-8 w-auto" />
 
             <ul className="flex items-center gap-6">
               {FOOTER_NAV.map((l) => (
