@@ -8,8 +8,8 @@ const Privacy = () => {
     <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
       <SiteHeader />
 
-      <main className="border-t border-white/5">
-        <section className="border-b border-white/10 bg-facioflow-dark py-16 md:py-20">
+      <main className="border-t border-border/40 dark:border-white/5">
+        <section className="border-b border-border/60 bg-facioflow-dark py-16 md:py-20 dark:border-white/10">
           <div className="container mx-auto max-w-3xl px-4 text-center">
             <h1 className="mb-6 text-3xl font-extrabold tracking-tight text-facioflow-dark-foreground md:text-4xl lg:text-5xl">
               Privacidade e proteção de dados
@@ -249,7 +249,7 @@ const Privacy = () => {
             </p>
           </section>
 
-          <section aria-labelledby="s8" className="space-y-4 border-t border-white/10 pt-12">
+          <section aria-labelledby="s8" className="space-y-4 border-t border-border/60 pt-12 dark:border-white/10">
             <h2 id="s8" className="text-xl font-bold text-facioflow-dark-foreground md:text-2xl">
               Atualizações desta política
             </h2>

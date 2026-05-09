@@ -2,6 +2,7 @@ import { useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/logo-facioflow.png";
 
 type SiteHeaderProps = {
@@ -26,7 +27,7 @@ const SiteHeader = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-facioflow-dark/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-facioflow-dark/80 backdrop-blur-lg dark:border-white/10">
       <nav className="container mx-auto flex items-center justify-between px-4 py-4">
         <NavLink to="/" aria-label="FacioFlow Home" onClick={() => setMobileMenuOpen(false)}>
           <img src={logo} alt="FacioFlow" className="h-8 md:h-10" />
@@ -56,26 +57,32 @@ const SiteHeader = ({
           </li>
         </ul>
 
-        <a href={ctaHref} className="hidden md:inline-flex">
-          <Button
-            size="sm"
-            className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90"
-          >
-            {ctaLabel}
-          </Button>
-        </a>
+        <div className="hidden items-center gap-1 md:flex">
+          <ThemeToggle />
+          <a href={ctaHref} className="inline-flex">
+            <Button
+              size="sm"
+              className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90"
+            >
+              {ctaLabel}
+            </Button>
+          </a>
+        </div>
 
-        <button
-          className="text-facioflow-dark-foreground md:hidden"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
-          aria-label="Alternar menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            className="text-facioflow-dark-foreground"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="Alternar menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {mobileMenuOpen && (
-        <div className="space-y-3 border-t border-white/10 bg-facioflow-dark px-4 pb-4 md:hidden">
+        <div className="space-y-3 border-t border-border/60 bg-facioflow-dark px-4 pb-4 dark:border-white/10 md:hidden">
           {ROUTE_LINKS.map((link) => (
             <NavLink
               key={link.to}

@@ -68,15 +68,15 @@ const Services = () => {
       <SiteHeader ctaLabel="Fale com um especialista" />
 
       <main>
-        <section className="relative overflow-hidden border-b border-white/10 py-24 md:py-36">
+        <section className="relative overflow-hidden border-b border-border/60 py-24 md:py-36 dark:border-white/10">
           <NetworkBackground />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60" />
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
           <div className="container relative mx-auto max-w-4xl px-4 text-center">
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
-              <span className="text-[#2463EB]">Automação inteligente</span>{" "}
-              <span className="text-white">para operações que precisam escalar</span>
+              <span className="text-primary">Automação inteligente</span>{" "}
+              <span className="text-facioflow-dark-foreground">para operações que precisam escalar</span>
             </h1>
             <p className="mx-auto mb-10 max-w-3xl text-lg text-muted-foreground md:text-xl">
               Conectamos seus sistemas, automatizamos processos e aplicamos IA onde
@@ -131,7 +131,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="border-y border-white/10 py-20 md:py-28">
+        <section className="border-y border-border/60 py-20 md:py-28 dark:border-white/10">
           <div className="container mx-auto px-4">
             <h2 className="mb-10 text-center text-3xl font-bold md:text-4xl">
               Nossos Serviços
@@ -141,7 +141,7 @@ const Services = () => {
               {serviceItems.map((item) => (
                 <article
                   key={item.title}
-                  className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 lg:grid-cols-2 lg:items-center"
+                  className="grid gap-6 rounded-2xl border border-border/60 bg-muted/40 p-6 md:p-8 lg:grid-cols-2 lg:items-center dark:border-white/10 dark:bg-white/5"
                 >
                   <div
                     className={`flex min-h-[220px] items-center justify-center rounded-xl bg-transparent p-6 ${
@@ -177,7 +177,7 @@ const Services = () => {
         </section>
 
         <section className="py-20 md:py-24">
-          <div className="container mx-auto max-w-5xl rounded-2xl border border-white/10 bg-white/5 px-6 py-12 text-center md:px-10">
+          <div className="container mx-auto max-w-5xl rounded-2xl border border-border/60 bg-muted/40 px-6 py-12 text-center md:px-10 dark:border-white/10 dark:bg-white/5">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
               Automação que começa pelo planejamento, não pela ferramenta.
             </h2>
@@ -200,16 +200,16 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-20 md:py-28">
+        <section className="border-t border-border/60 py-20 md:py-28 dark:border-white/10">
           <div className="container mx-auto px-4">
             <h2 className="mb-10 text-center text-3xl font-bold md:text-4xl">
               Benefícios
             </h2>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {benefitItems.map((item) => (
-                <Card key={item.title} className="border-white/10 bg-white/5">
+                <Card key={item.title} className="border-border/60 bg-muted/40 dark:border-white/10 dark:bg-white/5">
                   <CardContent className="space-y-3 p-6 text-center">
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-facioflow-dark-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.text}</p>
                   </CardContent>
                 </Card>

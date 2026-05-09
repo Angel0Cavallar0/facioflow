@@ -84,7 +84,7 @@ const Index = () => {
           <div className="container relative mx-auto px-4 text-center max-w-3xl">
             <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
               Inteligência tecnológica que{" "}
-              <span className="text-[#2463EB]">escala seu negócio</span>
+              <span className="text-primary">escala seu negócio</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Desenvolvemos soluções e automações personalizadas com IA para facilitar os processos da sua empresa e trazer mais clareza sobre os dados.
@@ -99,10 +99,13 @@ const Index = () => {
         </section>
 
         {/* ─── DESTAQUES ─── */}
-        <section className="py-16 bg-facioflow-dark border-t border-white/5">
+        <section className="border-t border-border/40 bg-facioflow-dark py-16 dark:border-white/5">
           <div className="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {HIGHLIGHTS.map((h) => (
-              <Card key={h.title} className="bg-white/5 border-white/10 hover:border-primary/50 transition-colors group">
+              <Card
+                key={h.title}
+                className="border-border/60 bg-muted/40 transition-colors hover:border-primary/50 group dark:border-white/10 dark:bg-white/5"
+              >
                 <CardContent className="flex flex-row items-center p-4 gap-3">
                   <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
                     <h.icon className="text-primary" size={20} />
@@ -128,7 +131,7 @@ const Index = () => {
               {SERVICES.map((s) => (
                 <Card
                   key={s.title}
-                  className="border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:border-primary/40"
+                  className="border-border/60 bg-muted/40 transition-all hover:-translate-y-1 hover:border-primary/40 dark:border-white/10 dark:bg-white/5"
                 >
                   <CardContent className="space-y-4 p-7">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/15">
@@ -157,7 +160,10 @@ const Index = () => {
         </section>
 
         {/* ─── SEGURANÇA ─── */}
-        <section id="seguranca" className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-facioflow-dark to-facioflow-dark border-t border-white/5">
+        <section
+          id="seguranca"
+          className="border-t border-border/40 bg-gradient-to-br from-primary/10 via-facioflow-dark to-facioflow-dark py-20 md:py-28 dark:border-white/5"
+        >
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-8 flex justify-center">
@@ -199,7 +205,10 @@ const Index = () => {
         </section>
 
         {/* ─── COMO TRABALHAMOS ─── */}
-        <section id="como-trabalhamos" className="relative overflow-hidden py-20 md:py-28 border-t border-white/5">
+        <section
+          id="como-trabalhamos"
+          className="relative overflow-hidden border-t border-border/40 py-20 md:py-28 dark:border-white/5"
+        >
           {/* Animated network background */}
           <NetworkBackground />
           {/* Gradient overlay for legibility */}
@@ -219,7 +228,7 @@ const Index = () => {
                   <div key={step.num} className={`relative md:flex items-center ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} md:mb-16 last:md:mb-0`}>
                     {/* Content */}
                     <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
-                      <Card className="bg-white/5 border-white/10 inline-block hover:border-primary/60 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
+                      <Card className="inline-block border-border/60 bg-muted/40 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-muted/60 hover:shadow-xl hover:shadow-primary/25 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
                         <CardContent className="p-6 space-y-2">
                           <div className="flex items-center gap-3 justify-start">
                             <step.icon className="text-primary" size={20} />
@@ -272,7 +281,7 @@ const Index = () => {
       </main>
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-white/10 bg-facioflow-dark py-12">
+      <footer className="border-t border-border/60 bg-facioflow-dark py-12 dark:border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <img src={logo} alt="FacioFlow" className="h-8" />
