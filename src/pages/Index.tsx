@@ -8,30 +8,25 @@ import {
   Bot,
   BarChart3,
   Wrench,
-  Smartphone,
-  MessageCircle,
-  Brain,
-  TrendingUp,
-  Lock,
   Search,
   FileText,
   Hammer,
   Rocket,
   RefreshCw,
-  Menu,
-  X,
   Instagram,
   Linkedin,
   Mail,
+  ArrowRight,
 } from "lucide-react";
-import logo from "@/assets/logo-facioflow.png";
+import { Link } from "react-router-dom";
 import NetworkBackground from "@/components/NetworkBackground";
-import { useState } from "react";
+import FacioFlowLogo from "@/components/FacioFlowLogo";
+import SiteHeader from "@/components/SiteHeader";
 
-const NAV_LINKS = [
-  { label: "Soluções", href: "#solucoes" },
-  { label: "Segurança", href: "#seguranca" },
-  { label: "Como Trabalhamos", href: "#como-trabalhamos" },
+const FOOTER_NAV = [
+  { label: "Início", to: "/" },
+  { label: "Serviços", to: "/servicos" },
+  { label: "Privacidade", to: "/privacidade" },
 ];
 
 const HIGHLIGHTS = [
@@ -43,44 +38,24 @@ const HIGHLIGHTS = [
 
 const SERVICES = [
   {
-    icon: Brain,
-    title: "Agentes de IA e Sistemas RAG",
-    desc: "Criamos agentes de inteligência artificial e sistemas de Geração Aumentada por Recuperação (RAG) personalizados para a sua empresa. Seus dados internos se transformam em uma base de conhecimento acessível e inteligente, e os agentes atuam como verdadeiros especialistas virtuais dentro da sua operação, ajudando equipes e clientes.",
-    examples:
-      "Exemplos: analista de CRM que identifica oportunidades e padrões no funil de vendas, analista de produto que monitora feedbacks e sugere melhorias, e assistente interno que consulta documentos e políticas da empresa em segundos.",
+    icon: Cog,
+    title: "Automação de processos e integrações",
+    desc: "Workflows que conectam ferramentas, eliminam tarefas manuais e fazem seus sistemas trabalharem como um só. Cada processo é mapeado, modelado e automatizado com regras próprias do seu negócio, garantindo execução consistente e auditável.",
   },
   {
-    icon: Cog,
-    title: "Automação de Processos",
-    desc: "Eliminamos tarefas manuais e repetitivas conectando os sistemas da sua empresa por meio de APIs, Webhooks e soluções personalizadas. Otimize tempo, reduza erros e ganhe escala operacional com fluxos automatizados de ponta a ponta.",
-    examples:
-      "Exemplos: envio automático de relatórios periódicos, sincronização de dados entre CRM e ERP, e disparo inteligente de notificações e alertas internos.",
+    icon: Bot,
+    title: "Agentes de IA e atendimento automatizado",
+    desc: "Chatbots e agentes inteligentes em WhatsApp, site e canais internos, com contexto próprio do seu negócio via arquitetura RAG. Aplicações que vão de qualificação de leads e suporte ao cliente até processos de RH e atendimento interno.",
   },
   {
     icon: BarChart3,
-    title: "Criação de Dashboards de BI",
-    desc: "Centralizamos os dados de todos os sistemas da sua empresa em dashboards inteligentes e interativos. Tenha visão clara e em tempo real de Marketing, Vendas, Produção, Financeiro e muito mais para tomar decisões baseadas em dados, com camadas de análise potencializadas por inteligência artificial.",
-    examples:
-      "Exemplos: dashboard comercial com funil de vendas, painel de performance de marketing e métricas de redes sociais, e acompanhamento de produção com indicadores operacionais.",
-  },
-  {
-    icon: Smartphone,
-    title: "Desenvolvimento de Aplicativos Web e Mobile",
-    desc: "Criamos aplicações web e mobile sob medida para o seu negócio, desde MVPs e ferramentas internas até plataformas completas voltadas ao cliente final, com foco em performance, usabilidade e escalabilidade.",
-    examples:
-      "Exemplos: portais de clientes, catálogos interativos de produtos e plataformas de banco de talentos para RH.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Desenvolvimento de Chatbots Conversacionais",
-    desc: "Desenvolvemos chatbots inteligentes para atendimento, qualificação de leads e suporte ao cliente. Integrados ao WhatsApp, site ou outras plataformas, seus chatbots trabalham 24/7 com linguagem natural e respostas personalizadas.",
-    examples:
-      "Exemplo: assistente virtual para atendimento e agendamento automático via WhatsApp 100% customizado.",
+    title: "Dashboards e inteligência de dados",
+    desc: "Painéis personalizados que centralizam indicadores de marketing, vendas, operação e atendimento. Dados consolidados das ferramentas que sua empresa já usa, atualizados automaticamente e prontos para decisão.",
   },
   {
     icon: Wrench,
-    title: "Desenvolvimento de Soluções Sob Medida",
-    desc: "Nem todo desafio tem uma ferramenta pronta no mercado. Analisamos a sua necessidade e desenvolvemos soluções tecnológicas exclusivas, integrações, plataformas, ferramentas e sistemas pensados especificamente para o seu contexto.",
+    title: "Plataformas sob medida",
+    desc: "Aplicações web completas para quando ferramenta de prateleira não resolve. Painéis administrativos, sistemas internos, portais de cliente — construídos com stack moderna e arquitetura escalável, prontos para crescer com o negócio.",
   },
 ];
 
@@ -93,56 +68,9 @@ const STEPS = [
 ];
 
 const Index = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <div className="min-h-screen bg-facioflow-dark text-facioflow-dark-foreground font-poppins">
-      {/* ─── HEADER ─── */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-facioflow-dark/80 backdrop-blur-lg">
-        <nav className="container mx-auto flex items-center justify-between px-4 py-4">
-          <a href="#" aria-label="FacioFlow Home">
-            <img src={logo} alt="FacioFlow" className="h-8 md:h-10" />
-          </a>
-
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* CTA PLACEHOLDER — substitua o href abaixo pelo seu link */}
-          <a href="#" className="hidden md:inline-flex">
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6">
-              Fale Conosco
-            </Button>
-          </a>
-
-          {/* Mobile toggle */}
-          <button className="md:hidden text-facioflow-dark-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </nav>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 bg-facioflow-dark px-4 pb-4 space-y-3">
-            {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                {l.label}
-              </a>
-            ))}
-            {/* CTA PLACEHOLDER */}
-            <a href="#">
-              <Button size="sm" className="w-full bg-primary text-primary-foreground rounded-full">Fale Conosco</Button>
-            </a>
-          </div>
-        )}
-      </header>
+    <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
+      <SiteHeader />
 
       <main>
         {/* ─── HERO ─── */}
@@ -150,11 +78,11 @@ const Index = () => {
           {/* Animated network background */}
           <NetworkBackground />
           {/* Gradient overlay for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-muted/45 via-muted/20 to-muted/50 dark:from-facioflow-dark/40 dark:via-facioflow-dark/20 dark:to-facioflow-dark/60" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
 
           <div className="container relative mx-auto px-4 text-center max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
               Inteligência tecnológica que{" "}
               <span className="text-primary">escala seu negócio</span>
             </h1>
@@ -171,10 +99,13 @@ const Index = () => {
         </section>
 
         {/* ─── DESTAQUES ─── */}
-        <section className="py-16 bg-facioflow-dark border-t border-white/5">
+        <section className="border-t border-border/40 bg-muted/50 py-16 dark:border-white/5 dark:bg-facioflow-dark">
           <div className="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {HIGHLIGHTS.map((h) => (
-              <Card key={h.title} className="bg-white/5 border-white/10 hover:border-primary/50 transition-colors group">
+              <Card
+                key={h.title}
+                className="border-border/60 bg-muted/40 transition-colors hover:border-primary/50 group dark:border-white/10 dark:bg-white/5"
+              >
                 <CardContent className="flex flex-row items-center p-4 gap-3">
                   <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors">
                     <h.icon className="text-primary" size={20} />
@@ -187,82 +118,104 @@ const Index = () => {
         </section>
 
         {/* ─── SOLUÇÕES ─── */}
-        <section id="solucoes" className="py-20 md:py-28 bg-gradient-to-b from-facioflow-dark to-facioflow-dark">
+        <section
+          id="solucoes"
+          className="bg-gradient-to-b from-background to-muted/35 py-20 md:py-28 dark:from-facioflow-dark dark:to-facioflow-dark"
+        >
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Criamos para <span className="text-primary">solucionar o seu problema</span>
-              </h2>
+            <div className="mx-auto mb-16 max-w-2xl text-center">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">O que entregamos</h2>
               <p className="text-muted-foreground">
-                Analisamos sua empresa para elaborar um sistema que se enquadre nas suas necessidades, centralizando dados, economizando tempo e aumentando sua receita.
+                Soluções tecnológicas construídas para gerar valor real, do diagnóstico à operação rodando.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {SERVICES.map((s, i) => (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {SERVICES.map((s) => (
                 <Card
                   key={s.title}
-                  className={`bg-white/5 border-white/10 hover:border-primary/40 transition-all hover:-translate-y-1 ${
-                    i === SERVICES.length - 1 && SERVICES.length % 3 === 1
-                      ? "lg:col-start-2"
-                      : ""
-                  }`}
+                  className="border-border/60 bg-muted/40 transition-all hover:-translate-y-1 hover:border-primary/40 dark:border-white/10 dark:bg-white/5"
                 >
-                  <CardContent className="p-7 space-y-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center">
+                  <CardContent className="space-y-4 p-7">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/15">
                       <s.icon className="text-primary" size={24} />
                     </div>
                     <h3 className="text-lg font-semibold text-facioflow-dark-foreground">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                    {s.examples && (
-                      <p className="text-xs text-muted-foreground/70 italic leading-relaxed">{s.examples}</p>
-                    )}
+                    <p className="text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-primary px-8 font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform duration-300 ease-out hover:scale-105 hover:bg-primary/90 active:scale-100"
+              >
+                <Link to="/servicos" className="group inline-flex items-center gap-2">
+                  Conheça mais nossos serviços
+                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
 
         {/* ─── SEGURANÇA ─── */}
-        <section id="seguranca" className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-facioflow-dark to-facioflow-dark border-t border-white/5">
+        <section
+          id="seguranca"
+          className="border-t border-border/40 bg-gradient-to-br from-primary/10 via-background to-muted/40 py-20 md:py-28 dark:border-white/5 dark:via-facioflow-dark dark:to-facioflow-dark"
+        >
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center gap-4 mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center">
+            <div className="mx-auto max-w-3xl text-center">
+              <div className="mb-8 flex justify-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/15">
                   <ShieldCheck className="text-primary" size={32} />
                 </div>
-                <div className="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center">
-                  <Lock className="text-primary" size={32} />
-                </div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="mb-8 text-3xl font-bold md:text-4xl">
                 Segurança e <span className="text-primary">Privacidade de Dados</span>
               </h2>
-              <div className="space-y-5 text-muted-foreground text-left md:text-center leading-relaxed">
+              <div className="space-y-5 text-left leading-relaxed text-muted-foreground md:text-center">
                 <p>
-                  A segurança dos seus dados é prioridade absoluta na FacioFlow. Toda a nossa operação é construída sobre práticas rigorosas de proteção de dados, em total conformidade com a <strong className="text-facioflow-dark-foreground">LGPD</strong> e o <strong className="text-facioflow-dark-foreground">GDPR</strong>.
+                  A segurança dos seus dados é prioridade absoluta na FacioFlow. Toda a nossa operação é construída sobre
+                  práticas rigorosas de proteção, em total conformidade com a{" "}
+                  <strong className="text-facioflow-dark-foreground">LGPD</strong> e o{" "}
+                  <strong className="text-facioflow-dark-foreground">GDPR</strong> — desde a coleta até o armazenamento e o
+                  processamento.
                 </p>
                 <p>
-                  Trabalhamos exclusivamente com ferramentas e sistemas que respeitam as normas de privacidade e segurança da informação. Desde a coleta até o armazenamento e processamento, cada etapa é planejada para garantir a integridade e a confidencialidade dos dados dos nossos clientes.
-                </p>
-                <p>
-                  Além disso, a FacioFlow responde diretamente às exigências da LGPD como empresa, o que significa que mantemos políticas internas de governança de dados, controle de acesso e transparência em todas as operações que envolvem informações sensíveis.
+                  Trabalhamos exclusivamente com provedores e ferramentas em conformidade com as normas de privacidade e
+                  segurança da informação, e mantemos políticas internas de governança, controle de acesso e transparência em
+                  todas as operações que envolvem dados sensíveis.
                 </p>
                 <p className="font-semibold text-facioflow-dark-foreground">
-                  Seus dados são seus. Nós só tratamos eles com a responsabilidade e cuidados que eles merecem.
+                  Seus dados são seus. Nós só tratamos eles com a responsabilidade e cuidado que eles merecem.
                 </p>
+              </div>
+              <div className="mt-10 flex justify-center">
+                <Link
+                  to="/privacidade"
+                  className="group inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/90"
+                >
+                  Saiba mais sobre nossa política de privacidade
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* ─── COMO TRABALHAMOS ─── */}
-        <section id="como-trabalhamos" className="relative overflow-hidden py-20 md:py-28 border-t border-white/5">
+        <section
+          id="como-trabalhamos"
+          className="relative overflow-hidden border-t border-border/40 py-20 md:py-28 dark:border-white/5"
+        >
           {/* Animated network background */}
           <NetworkBackground />
           {/* Gradient overlay for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-muted/45 via-muted/20 to-muted/50 dark:from-facioflow-dark/40 dark:via-facioflow-dark/20 dark:to-facioflow-dark/60" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
           <div className="container relative mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -278,7 +231,7 @@ const Index = () => {
                   <div key={step.num} className={`relative md:flex items-center ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} md:mb-16 last:md:mb-0`}>
                     {/* Content */}
                     <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
-                      <Card className="bg-white/5 border-white/10 inline-block hover:border-primary/60 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
+                      <Card className="inline-block border-border/60 bg-muted/40 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-muted/60 hover:shadow-xl hover:shadow-primary/25 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
                         <CardContent className="p-6 space-y-2">
                           <div className="flex items-center gap-3 justify-start">
                             <step.icon className="text-primary" size={20} />
@@ -331,17 +284,17 @@ const Index = () => {
       </main>
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-white/10 bg-facioflow-dark py-12">
+      <footer className="border-t border-border/60 bg-muted/40 py-12 dark:border-white/10 dark:bg-facioflow-dark">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <img src={logo} alt="FacioFlow" className="h-8" />
+            <FacioFlowLogo className="h-8 w-auto" />
 
             <ul className="flex items-center gap-6">
-              {NAV_LINKS.map((l) => (
-                <li key={l.href}>
-                  <a href={l.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {FOOTER_NAV.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-sm text-muted-foreground transition-colors hover:text-primary">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
