@@ -78,7 +78,7 @@ const Index = () => {
           {/* Animated network background */}
           <NetworkBackground />
           {/* Gradient overlay for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-muted/45 via-muted/20 to-muted/50 dark:from-facioflow-dark/40 dark:via-facioflow-dark/20 dark:to-facioflow-dark/60" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
 
           <div className="container relative mx-auto px-4 text-center max-w-3xl">
@@ -99,7 +99,7 @@ const Index = () => {
         </section>
 
         {/* ─── DESTAQUES ─── */}
-        <section className="border-t border-border/40 bg-facioflow-dark py-16 dark:border-white/5">
+        <section className="border-t border-border/40 bg-muted/50 py-16 dark:border-white/5 dark:bg-facioflow-dark">
           <div className="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {HIGHLIGHTS.map((h) => (
               <Card
@@ -118,7 +118,10 @@ const Index = () => {
         </section>
 
         {/* ─── SOLUÇÕES ─── */}
-        <section id="solucoes" className="py-20 md:py-28 bg-gradient-to-b from-facioflow-dark to-facioflow-dark">
+        <section
+          id="solucoes"
+          className="bg-gradient-to-b from-background to-muted/35 py-20 md:py-28 dark:from-facioflow-dark dark:to-facioflow-dark"
+        >
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-16 max-w-2xl text-center">
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">O que entregamos</h2>
@@ -162,7 +165,7 @@ const Index = () => {
         {/* ─── SEGURANÇA ─── */}
         <section
           id="seguranca"
-          className="border-t border-border/40 bg-gradient-to-br from-primary/10 via-facioflow-dark to-facioflow-dark py-20 md:py-28 dark:border-white/5"
+          className="border-t border-border/40 bg-gradient-to-br from-primary/10 via-background to-muted/40 py-20 md:py-28 dark:border-white/5 dark:via-facioflow-dark dark:to-facioflow-dark"
         >
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
@@ -212,7 +215,7 @@ const Index = () => {
           {/* Animated network background */}
           <NetworkBackground />
           {/* Gradient overlay for legibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60 pointer-events-none" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-muted/45 via-muted/20 to-muted/50 dark:from-facioflow-dark/40 dark:via-facioflow-dark/20 dark:to-facioflow-dark/60" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
           <div className="container relative mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -281,7 +284,7 @@ const Index = () => {
       </main>
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-border/60 bg-facioflow-dark py-12 dark:border-white/10">
+      <footer className="border-t border-border/60 bg-muted/40 py-12 dark:border-white/10 dark:bg-facioflow-dark">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <img src={logo} alt="FacioFlow" className="h-8" />

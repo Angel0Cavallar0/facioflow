@@ -70,7 +70,7 @@ const Services = () => {
       <main>
         <section className="relative overflow-hidden border-b border-border/60 py-24 md:py-36 dark:border-white/10">
           <NetworkBackground />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-facioflow-dark/40 via-facioflow-dark/20 to-facioflow-dark/60" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-muted/45 via-muted/20 to-muted/50 dark:from-facioflow-dark/40 dark:via-facioflow-dark/20 dark:to-facioflow-dark/60" />
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
           <div className="container relative mx-auto max-w-4xl px-4 text-center">
