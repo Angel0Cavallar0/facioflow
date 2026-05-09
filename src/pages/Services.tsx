@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
@@ -7,6 +8,12 @@ import MiniDashboard from "@/components/MiniDashboardv2";
 import MiniChat from "@/components/MiniChat";
 import MiniWorkflow from "@/components/MiniWorkflowv2";
 import MiniPlatform from "@/components/MiniPlatform";
+import { ShieldCheckIcon } from "@/components/ShieldCheckIcon";
+import { SpeedChatIcon } from "@/components/SpeedChatIcon";
+import { ScalabilityIcon } from "@/components/ScalabilityIcon";
+import { VisibilityIcon } from "@/components/VisibilityIcon";
+import { IntegrationIcon } from "@/components/IntegrationIcon";
+import { FocusTasksIcon } from "@/components/FocusTasksIcon";
 
 const serviceItems = [
   {
@@ -35,30 +42,42 @@ const serviceItems = [
   },
 ];
 
-const benefitItems = [
+const BENEFIT_ICON_SIZE = 48;
+
+const benefitItems: {
+  title: string;
+  text: string;
+  Icon: ComponentType<{ className?: string; size?: number; strokeWidth?: number }>;
+}[] = [
   {
-    title: "Menos erro humano, mais previsibilidade.",
-    text: "Processos rodam do mesmo jeito todo dia, sem depender de quem está no plantão.",
+    title: "Mais previsibilidade e confiabilidade",
+    text: "Os processos rodam do mesmo jeito todos os dias, sem depender de quem está no plantão.",
+    Icon: ShieldCheckIcon,
   },
   {
-    title: "Resposta ao cliente em segundos, não em horas.",
-    text: "Atendimento, qualificação e envio de proposta acontecem enquanto seu time dorme.",
+    title: "Mais velocidade nas respostas.",
+    text: "Respostas em segundos, atendimento, qualificação e envio de propostas que acontecem a qualquer momento.",
+    Icon: SpeedChatIcon,
   },
   {
-    title: "Capacidade de escalar sem dobrar a equipe.",
-    text: "O volume cresce, o custo operacional não acompanha na mesma proporção.",
+    title: "Mais escalabilidade.",
+    text: "Quando a demanda dobra, sua estrutura não precisa dobrar junto. A automação assume o trabalho repetitivo enquanto o time foca no que escala receita.",
+    Icon: ScalabilityIcon,
   },
   {
-    title: "Visibilidade real do que está acontecendo.",
-    text: "Cada execução fica registrada, auditável e mensurável.",
+    title: "Visibilidade Real",
+    text: "Cada execução é registrada, auditável e mensurável. O que antes estava espalhado entre planilhas, sistemas e cabeças vira uma única fonte confiável pra decisão.",
+    Icon: VisibilityIcon,
   },
   {
-    title: "Integração entre sistemas que nunca conversaram.",
-    text: "ERP, CRM, planilha e WhatsApp passam a trabalhar como um só. Necessário verificação de viabilidade para o projeto.",
+    title: "Integração",
+    text: "ERP, CRM, planilha e WhatsApp deixam de ser um só e passam a trabalhar como uma operação conjunta.",
+    Icon: IntegrationIcon,
   },
   {
-    title: "Sua equipe focada no que importa.",
-    text: "Menos copia-e-cola, mais decisão, criatividade e relacionamento.",
+    title: "Foco no que importa.",
+    text: "Tarefas repetitivas saem da rotina do time, sobra energia pra pensar, planejar e construir, que é onde pessoas fazem diferença",
+    Icon: FocusTasksIcon,
   },
 ];
 
@@ -206,11 +225,14 @@ const Services = () => {
               Benefícios
             </h2>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {benefitItems.map((item) => (
-                <Card key={item.title} className="border-border/60 bg-muted/40 dark:border-white/10 dark:bg-white/5">
-                  <CardContent className="space-y-3 p-6 text-center">
-                    <h3 className="text-xl font-semibold text-facioflow-dark-foreground">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.text}</p>
+              {benefitItems.map(({ title, text, Icon }) => (
+                <Card key={title} className="border-border/60 bg-muted/40 dark:border-white/10 dark:bg-white/5">
+                  <CardContent className="flex flex-col items-center p-6 text-center">
+                    <div className="mb-4 flex justify-center">
+                      <Icon className="text-primary" size={BENEFIT_ICON_SIZE} />
+                    </div>
+                    <h3 className="mb-3 text-xl font-semibold text-facioflow-dark-foreground">{title}</h3>
+                    <p className="text-sm text-muted-foreground">{text}</p>
                   </CardContent>
                 </Card>
               ))}
