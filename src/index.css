@@ -6,24 +6,24 @@
 
 @layer base {
   :root {
-    /* Light: cinza como base (~#e1e6eb); cartões/painéis um tom mais claro (sem branco puro) */
-    --background: 215 22% 91%;
+    /* Light: cinzas um pouco mais escuros (mesma família de matiz) */
+    --background: 215 22% 87%;
     --foreground: 220 28% 12%;
 
-    --card: 215 18% 96%;
+    --card: 215 18% 92%;
     --card-foreground: 220 28% 12%;
 
-    --popover: 215 18% 96%;
+    --popover: 215 18% 92%;
     --popover-foreground: 220 28% 12%;
 
     --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 18% 88%;
+    --secondary: 215 18% 84%;
     --secondary-foreground: 220 28% 14%;
 
-    --muted: 215 18% 86%;
-    --muted-foreground: 215 12% 34%;
+    --muted: 215 18% 82%;
+    --muted-foreground: 215 12% 31%;
 
     --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
@@ -31,22 +31,22 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 14% 78%;
-    --input: 215 14% 78%;
+    --border: 215 14% 74%;
+    --input: 215 14% 74%;
     --ring: 221 83% 53%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 215 22% 91%;
+    --sidebar-background: 215 22% 87%;
     --sidebar-foreground: 220 28% 12%;
     --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 18% 88%;
+    --sidebar-accent: 215 18% 84%;
     --sidebar-accent-foreground: 220 28% 14%;
-    --sidebar-border: 215 14% 80%;
+    --sidebar-border: 215 14% 76%;
     --sidebar-ring: 221 83% 53%;
 
-    --facioflow-dark: 215 22% 91%;
+    --facioflow-dark: 215 22% 87%;
     --facioflow-dark-foreground: 220 28% 12%;
     --facioflow-blue-glow: 221 83% 53%;
     --facioflow-blue-deep: 224 76% 48%;
