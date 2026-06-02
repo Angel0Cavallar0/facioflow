@@ -13,7 +13,6 @@ type SiteHeaderProps = {
 const ROUTE_LINKS = [
   { label: "Início", to: "/" },
   { label: "Serviços", to: "/servicos" },
-  { label: "Privacidade", to: "/privacidade" },
 ];
 
 const SiteHeader = ({
