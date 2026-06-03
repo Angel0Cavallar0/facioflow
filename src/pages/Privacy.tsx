@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -6,6 +7,16 @@ export const LAST_UPDATED = "02/06/2026";
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
+      <Helmet>
+        <title>Política de Privacidade — FacioFlow</title>
+        <meta
+          name="description"
+          content="Saiba como a FacioFlow coleta, usa e protege os seus dados pessoais em conformidade com a LGPD."
+        />
+        <link rel="canonical" href="https://facioflow.com.br/privacidade" />
+        <meta property="og:title" content="Política de Privacidade — FacioFlow" />
+        <meta property="og:url" content="https://facioflow.com.br/privacidade" />
+      </Helmet>
       <SiteHeader />
 
       <main className="border-t border-border/40 dark:border-white/5">

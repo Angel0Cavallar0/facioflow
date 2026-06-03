@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import SiteHeader from "@/components/SiteHeader";
 import FacioFlowLogo from "@/components/FacioFlowLogo";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -228,6 +229,10 @@ const Section = ({
 const SystemDesign = () => {
   return (
     <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
+      <Helmet>
+        <title>System Design — FacioFlow</title>
+        <meta name="description" content="Página interna de referência de design do sistema FacioFlow." />
+      </Helmet>
       <SiteHeader />
 
       <main className="border-t border-border/40 dark:border-white/5">

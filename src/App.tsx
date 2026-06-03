@@ -8,6 +8,8 @@ import Services from "./pages/Services";
 import Privacy from "./pages/Privacy";
 import SystemDesign from "./pages/SystemDesign";
 import NotFound from "./pages/NotFound";
+import CookieConsent from "./components/CookieConsent";
+import GtmPageView from "./components/GtmPageView";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GtmPageView />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/servicos" element={<Services />} />
@@ -25,6 +28,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
