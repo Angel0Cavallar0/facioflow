@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
@@ -85,6 +86,16 @@ const benefitItems: {
 const Services = () => {
   return (
     <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
+      <Helmet>
+        <title>Serviços — FacioFlow | Automação, IA, Dashboards e Plataformas</title>
+        <meta
+          name="description"
+          content="Automação de processos, agentes de IA, dashboards de dados e plataformas sob medida. Soluções tecnológicas que escalam o seu negócio."
+        />
+        <link rel="canonical" href="https://facioflow.com.br/servicos" />
+        <meta property="og:title" content="Serviços — FacioFlow" />
+        <meta property="og:url" content="https://facioflow.com.br/servicos" />
+      </Helmet>
       <SiteHeader ctaLabel="Fale com um especialista" />
 
       <main>

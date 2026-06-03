@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -61,6 +62,16 @@ const STEPS = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-facioflow-dark font-sans text-facioflow-dark-foreground">
+      <Helmet>
+        <title>FacioFlow — Inteligência Tecnológica que Escala seu Negócio</title>
+        <meta
+          name="description"
+          content="Soluções e automações personalizadas com IA para facilitar os processos da sua empresa e trazer mais clareza sobre os dados."
+        />
+        <link rel="canonical" href="https://facioflow.com.br/" />
+        <meta property="og:title" content="FacioFlow — Inteligência Tecnológica que Escala seu Negócio" />
+        <meta property="og:url" content="https://facioflow.com.br/" />
+      </Helmet>
       <SiteHeader />
 
       <main>
