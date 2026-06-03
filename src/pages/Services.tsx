@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import PointSphere from "@/components/PointSphere";
 import NetworkBackground from "@/components/NetworkBackground";
 import MiniDashboard from "@/components/MiniDashboardv2";
@@ -240,6 +241,8 @@ const Services = () => {
           </div>
         </section>
       </main>
+
+      <SiteFooter />
     </div>
   );
 };
